@@ -1,5 +1,5 @@
 # David Stephen James Farquharson
-* <david.s.j.farquharson@gmail.com>
+* david.s.j.farquharson at gmail dot com
 
 ## Background
 
