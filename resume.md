@@ -3,7 +3,7 @@
 
 ## Background
 
-I am a software engineer completely fascinated by the theory and practice of Computer Science looking to apply and grow my skills in a focused, enthusiastic environment.
+I am a software engineer completely fascinated by the theory and practice of Computer Science looking to apply and grow my skills in a focused, collaborative, enthusiastic environment.
 
 
 ## Education
