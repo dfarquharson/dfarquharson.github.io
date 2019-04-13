@@ -1,5 +1,9 @@
 body {
-    font-size: 1.5em;
-    margin: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: sans-serif;
+	word-wrap: break-word;
+	margin: auto 5% auto 5%;
     max-width: 900px;
 }
+
