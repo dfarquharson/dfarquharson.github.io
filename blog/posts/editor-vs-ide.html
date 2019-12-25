@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>farq::editor-vs-ide</title>
+  <link rel="stylesheet" type="text/css" href="../../base.css">
+  <link rel="stylesheet" type="text/css" href="../blog.css">
+</head>
+<body>
+<h1>Cage Match: Text Editors vs IDEs</h1>
+<h2>The Most Personal Programmer Tooling Reflects A Difference of Worldview</h2>
+
+<p>
+I, like innumerable programmers before me and innumerable programmers after me,
+have been, and presently remain, obsessed with many perpetual flame wars:
+Language X vs Language Y, Framework A vs Framework B, Operating System F vs Operating System G,
+FP vs OOP, Static Typing vs Dynamic Typing, Lisp vs Everything, etc., etc. ad fucking nauseam.
+Perphaps the greatest flamewar of them all
+(save perhaps vim vs emacs) is that of Text Editor vs IDE. This battle has raged for decades,
+and it seems to be showing no signs of slowing down (although some might argue that VSCode,
+and emacs before it, serve as bridges between these two worlds, the "gradual IDE", if you will,
+much like the gradual types in Python and Typescript). This will be our topic today:
+Text Editor vs IDE. Spoiler: I actively use both. However, this will not be a wishy-washy
+"right tool for the job" sort of post (unrelated aside: this blog post was written in vim btw).
+I will end up with a conclusion along those lines, but I will be more interesting (hopefully)
+and prescriptive than merely "do the right thing" vagaries.
+My argument is that Text Editors and IDEs have different core philosophies on
+what the act of programming is about, and that both of these philosophies are right in some contexts.
+In a nutshell, the Text Editor programmer is about making a hand-crafted work of art. The code itself
+is the art, as well as, potentially, the result of running the code. They want the finest grain
+control over the smallest minutia of their codebase. They may eschew any auto-formatting tools
+in favor of their own idiosyncratic style. They want to express their unique and distinct
+personalities and tastes via an eclectic hodge-podge of tooling, some off the shelf, some custom.
+They love making things purely for the intrinsic joy of it, and their editor gets out of their way
+and just lets them do their thing. It puts all of the responsibility on the shoulders of the programmer,
+and offers little to no help out of the box (although the best text editors (vim, emacs, vscode, etc.)
+are indeed infinitely configurable and scriptable to create any kind of assistance and niceties that you
+can imagine, and are far more accessibly scriptable than a more cumbersome IDE API). Long story short,
+editors are not intended to be tools for code navigation or discovery, they are extremely sharp knives
+for slicing and dicing text. That's it. The semantics of that text are up to the programmer to decipher.
+</p>
+
+<p>
+IDEs, on the other hand, are designed for the express purpose of semantic understanding of your code,
+to make the process of navigating the structures your code represents and discovering the capabilities
+of the codebase in front of you as accessible and straightforward as possible. They are AMAZING at this.
+Once you've used IntelliJ on a Java project, for example (I'm sure things are similar with VS and C#
+and other first-class IDE/Language combos), then you'll totally understand what I'm talking about.
+They're magic. "Hmm, I see this class implements that interface. I wonder what other implementations
+of that interface exist. Ctrl+B to jump to the interface definition. Ctrl+Shift+B to get a list of all
+implemetations of that interface. Bam." That's awesome, no question about it. But you can already start
+to feel the philosophical difference here. In editor world, we're hand-crafting everything, typically solo,
+and so when we ask ourselves: "What implementations of this interface exist?", the editor-programmer's
+response is: "Well, I created it, so I just know". The editor doesn't help you with this, because that's
+not its job. That's the programmer's job, at least in editor-philosophy land. IDEs, on the other hand,
+are ideal for the situation of being thrust into a new and large codebase, with a high velocity of change
+coming from lots of people on potentially lots of teams, where you need to figure out the bare minimum
+of how things relevant to the change you need to make work so that you can get it done and change it and keep
+everything moving along. IDEs are for the opposite use-case, and of an opposite philosophy, to the editor
+use-case. They are not about art. They are not about presenting a blank canvas on which the solo programmer
+can create. They are about large software on large teams that cannot bear the ramp-up time to accommodate
+the editor-style programmer. This sounds pejorative, and, deep down, on the inside, it kinda is, but it's
+also an inescapble reality of employment as a software engineer in today's industry in the majority of
+cases. It may be sad and impersonal and a bit dehumanizing, but it's necessary to maintain anything
+approximating an "acceptable level of productivity" in such a workplace.
+</p>
+<p>
+Now, before you go telling me how wrong I am (lol, I would never include a comments section on my blog),
+I realize that there are counter examples to these sweeping generalities. I know there's some ninja at
+Google who uses emacs on the most massive codebases known to humanity. I'd also argue that this person
+uses some pretty fancy and IDE-like tooling to make that happen with whatever Google's internal version
+of the tool formerly known as "code search" is these days. And I know that the editor folks will often
+sing the praises of "Unix is my IDE", which is an excellent approach that I personally thoroughly enjoy,
+but it also seems to strongly smell of the aforementioned "editor philosophy" of putting the onus of
+understanding firmly on the shoulders of the programmer. Sure, a proper unix philosopher will write
+many a script and tool to compose together and help them form a more thorough understanding of a given
+codebase, but they're still largely hand-crafting artisans in doing so, so I think it reinforces my point.
+The point being, again, that editors are for hand-crafted artisanship, and an artful and thorough and
+deep understanding of the codebase in question is required for this to be a productive means of growing,
+enhancing, and maintaining it. The IDE philosophy is very much the antithesis of that, where it provides
+as much assistance as possible so that you can get by with the smallest level of understanding required
+to get your job done. It helps you immensely so that you can make sense of a thing that is otherwise
+incomprehensible in scope; that's an indispensible tool in such an environment (read: all places of work,
+or at least all "enterprise" places of work).
+</p>
+
+<p>
+And this is where I come to the lukewarm, centrist chad "right tool for the job" conclusion,
+but I do so with an important caveat:
+<ul>
+    <li>When you're making something from scratch, that only you or a small group of trusted peers
+        are working on, then you'll benefit greatly from the editor-philosophy approach, as it demands
+        intimate familiarity with every detail of your codebase.
+    </li>
+    <li>When you're working on a large team, with a large codebase that you're not intimately familiar
+        with, that has a lot of churn and variable standards of quality, then you cannot live without
+        an IDE. To do so would be active self-harm and ascetic masochism.
+    </li>
+</ul>
+I think that projects of both of these types must necessarily exist. I personally find the former to be
+a lot more fun. I (and my bank account) am quite grateful that the latter exists and pays so well for the
+trouble. And so I shall remain: enterprise IDE programmer by day, text editor poet by night.
+</p>
+
+<p>
+P.S. I think it's worth noting that "the editor philosophy" can be followed when actually using an IDE.
+You can still be a hand-crafted pretentious artisan while using an IDE. I do, however, believe that one
+cannot be an "IDE philosopher" when using a plain editor. You can slap extensions on that thing until
+the cows come home, but I still haven't seen an amalgamation of extensions that comes anywhere close to
+the semantic understanding of your codebase provided by a top-tier (IntelliJ, in my experience) IDE.
+</p>
+
+<p>
+P.P.S. Another thing I love about life in editor-land (and I think this is truly unique to editor-land,
+unless you intentionally gimp your IDE and turn off all the helpers such that it's basically just a shitty
+editor) is that it ends up feeling so much more like "writing" than programming in an IDE.
+In an editor, the code has a more "prose-like" feeling. This is tremendously vague and subjective, and
+I'm doing a poor job of articulating myself, but I think there's a 'there' there. There's something
+about the process of internalization of a language's syntax and semantics that is required to become
+a fluent editor programmer. The same thing is true for the libraries that you utilize. In IDE-land,
+you slap in a new dependency willy-nilly because your IDE will help you figure it out as you go.
+It just doesn't require as much thought. That's a blessing and a curse. In editor-land, you have to
+really familiarize yourself with a new library to be able to use it effectively. This normally requires
+some investment in reading the docs, skimming the reference, or otherwise familiarizing yourself with
+the library out-of-band. There's a significant time cost there. But there's also a significant boon
+to such a process of internalization. It isn't just a tool you use at that point, it's an intimate part
+of you. It's embedded in your mind. It's now part of your cognitive toolbox in addition to being just another
+chunk of your binary. This "enforced fluency" in editor-land is what originally drew me in, and it's also
+why I remain a secret (well, not so much anymore I suppose) editor elitist. You'll still have to pry
+IntelliJ out of my cold dead hands though if you're asking me to work on some Java or some big pile of
+unfamiliar code for which there is an IDE with decent support.
+</p>
+
+<p>
+P.P.P.S. I think another similar comparison here is using GPS navigation vs memorizing the lay of the land.
+There's no question that a GPS is the most expedient means of getting from point A to point B, particularly
+in an unfamiliar location. But when you're home, in the place you know best, a GPS becomes predominantly an
+unecessary annoyance. There are things you know that it doesn't know. There are creative sidetracks you
+can take, or might want to take, just because you feel like it. Sometimes you want to explore something weird
+just for the pure joy of it, and you don't want to be nagged that there's a route that 2 minutes faster in
+the current traffic. Some of that joy is inaccessible to you if you always follow the rails put in front of
+you by your GPS. And sometimes, you don't really have a hard-and-fast point B in mind when you leave point A;
+you might just want to explore. How can a tool designed to get you from A to B help in that case?
+The most serious (and probably most contentious) point here being that you don't internalize
+when you use a GPS. When you use a GPS, you become entirely dependent on the GPS to guide you. You often
+phase out and allow the soothing voice to guide you. I think that there's something very harmful in the losing
+out on such internalization. Inb4 comment about how Socrates thought writing was harmful because it ruined the
+internalization of memorizing things. A counter argument in favor of GPS (this is all supposed to be a metaphor
+about IDEs still btw) is that by freeing you from the need to internalize your navigation, you are capable of
+now internalizing something new instead, and that people who are afraid of that are just head-in-the-sand
+curmudgeons stuck in the past and afraid of the future. In response, I'd argue that internalization of the
+current reality is necessary in order to transcend it; you can't invent something truly new unless you deeply
+and thoroughly understand that which already exists.
+</p>
+
+<span>:wq</span>
+
+</body>
+</html>
+
