@@ -46,11 +46,13 @@
   </li>
   <li><b>Build Systems: </b>
       Make,
+      Bazel,
       Maven,
       Gradle
   </li>
   <li><b>Databases: </b>
       PostgreSQL,
+      BigQuery,
       Oracle,
       H2,
       SQLite,
@@ -71,7 +73,8 @@
       SQLAlchemy,
       Pytest,
       Hypothesis,
-      Toolz
+      Toolz,
+      Mypy
   </li>
   <li><b>Infrastructure: </b>
       Kubernetes,
@@ -95,7 +98,9 @@
       Kubernetes Engine,
       Compute Engine,
       Storage,
-      Network Services
+      Network Services,
+      BigQuery,
+      Dataflow
   </li>
   <li><b>Continuous Integration/Continuous Delivery: </b>
       Jenkins,
@@ -107,9 +112,74 @@
 
 <h2>Experience</h2>
 
-<h3>Analysts</h3>
+<h3>BestBuy (via AIM)</h3>
 
-<h4>Senior Full Stack Software Engineer -- May 2019 to Present</h4>
+<h4>ML Engineer -- August 2020 to Present</h4>
+<ul>
+    <li>Designed, implemented, and delivered automated Code Standards for the team,
+        including adding and enforcing type signatures via mypy,
+        automatic code formatting via isort and black,
+        style checking via pycodestyle,
+        complexity analysis via radon,
+        and the continuous running of an extensive and ever-growing test suite via pytest,
+        runnable anywhere via a single, simple make target,
+        all with the goal of asymptotically approaching "true continuousness" in the integration of change and the delivery of value
+        (mypy, isort, black, pycodestyle, radon, pytest, make)
+    </li>
+    <li>Designed, prototyped, and delivered continuous ML model deployment
+        (Kubeflow, Jenkins, Google Cloud Build, ArgoCD, Seldon)
+    </li>
+    <li>Assisted, primarily in an MLOps capacity, in the shipping of the first live endpoint
+        backed by an ML model used in production at BestBuy,
+        which serves as a means of re-ranking recommendations
+        (Kubernetes, Kubeflow, Seldon)
+    </li>
+    <li>Introduced, integrated, maintained, and advocated for the use of a Monorepo,
+        leveraging Bazel for fast, correct, granular builds,
+        to accelerate our rate and increase our breadth of change and our collective ease of code reuse and sharing
+        (Bazel, Make, BitBucket, Jenkins, GitHub)
+    </li>
+    <li>Inspired, informed, and entertained via regular, passionate, detailed, technical demos of working software</li>
+    <li>Led by example in inciting cultural change pertaining to engineering rigor,
+        championing the extensive, expressive use of type annotations,
+        a relentless empiricism driven by tests in the designing of systems and their constituent components,
+        and an offloading of "the boring stuff" to automation written in a manner adhering to, demonstrating the value of,
+        and driving forward those very means of rigor
+        (mypy, pytest, ScalaTest, make)
+    </li>
+    <li>Performed a wide variety of Data Engineering tasks
+        on large-scale datasets in excess of 100+ billion rows (20+ TB)
+        (Dataflow, Kubeflow, BigQuery, Google Cloud Storage (GCS))
+    </li>
+    <li>Creatively mitigated legacy data-quality issues
+        by graph-building via value-tracing to make sense of large, undocumented piles of legacy data,
+        reverse engineering a more comprehensive schema,
+        creating a tangible representation of their connectedness in graph form,
+        enabling better data accessibility, comprehensibility, and usability
+        (Mypy, Pytest, BigQuery, Dataflow, Kubeflow)
+    </li>
+    <li>Ingeniously leveraged parameterized pytest tests that walk the abstract syntax tree
+        to check all functions for various properties we would like to enforce per our agreed-upon
+        and regularly revised code standards, effectively enforcing constraints on functions per our guidelines as they are written
+        (pytest, mypy)
+    </li>
+    <li>Demonstrated a rigorous commitment to Types and Tests,
+        illustrating their incredible value as augmentations of human intellect and power,
+        highlighting their unique ability to decrease costs for entering and maintaining "flow",
+        the happiest and most productive state in which every programmer takes great delight :)
+    </li>
+    <li>Authored and maintained our setup scripts to entirely automate the creation of a functional local development environment,
+        reducing down to a simple command, literally `make magic`, that does all-the-things,
+        from nothing up through locally running and passing tests,
+        all the way to individual kubernetes clusters (hosted in GCP (GKE)) in which ML Scientists can iterate at scale with
+        whatever hardware is best suited to the task at hand
+        (Make, Ansible, Bash)
+    </li>
+</ul>
+
+<h3>Zebra (via Analysts)</h3>
+
+<h4>Senior Full Stack Software Engineer -- May 2019 to July 2020</h4>
 <ul>
     <li>Designed, implemented, and delivered "Reaper", a graph-based, functional-styled compiler from a gathered state of
         a Google Cloud Platform project to a gcloud/gsutil script that deletes vestigial resources, and subsequent vestigial
